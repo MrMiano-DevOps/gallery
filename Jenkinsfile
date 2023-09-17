@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('Test webhook') {
             steps {
-                echo "Webhook is working"
+                echo "Webhook is working now"
             }
         }
     }

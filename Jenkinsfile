@@ -14,9 +14,9 @@ pipeline {
             }
         }
 
-        stage ('Build') {
+        stage ('Start server') {
             steps {
-                sh 'npm build'
+                sh 'node serve'
             }
         }
     }

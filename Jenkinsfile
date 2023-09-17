@@ -16,7 +16,7 @@ pipeline {
 
         stage ('Start server') {
             steps {
-                sh 'node serve'
+                sh 'node server.js'
             }
         }
     }

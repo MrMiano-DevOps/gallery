@@ -25,6 +25,7 @@ pipeline {
                 sh 'npm te'
             }
         }
+    }
 
     post ('Failure Email Notification') {
             failure {
@@ -32,6 +33,5 @@ pipeline {
 
                 Check console output at $BUILD_URL to view the results.''', cc: '', from: '', replyTo: '', subject: 'Jenkins Pipeline Failure', to: '$DEFAULT_RECIPIENTS'
             }
-        }
     }
 }

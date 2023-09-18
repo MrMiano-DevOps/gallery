@@ -14,9 +14,9 @@ pipeline {
             }
         }
 
-        stage ('Start server') {
+        stage ('Deploy to Render') {
             steps {
-                sh 'node server.js'
+                sh 'curl $RENDER_DEPLOY_HOOK'
             }
         }
     }

@@ -22,7 +22,7 @@ pipeline {
 
         stage ('Test') {
             steps {
-                sh 'npm te'
+                sh 'npm test'
             }
         }
     }

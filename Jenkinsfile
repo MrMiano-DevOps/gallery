@@ -29,7 +29,7 @@ pipeline {
 
     post {
             failure {
-                emailext body: 'Your pipeline has failed', subject: 'Jenkins Pipeline Failure', to: 'anthony.maina@student.moringaschool.com'
+                emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
             }
     }
 }

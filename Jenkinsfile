@@ -29,9 +29,7 @@ pipeline {
 
     post {
             failure {
-                mail bcc: '', body: '''$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
-
-                Check console output at $BUILD_URL to view the results.''', cc: '', from: '', replyTo: '', subject: 'Jenkins Pipeline Failure', to: '$DEFAULT_RECIPIENTS'
+                emailext body: '${DEFAULT_CONTENT}', subject: '${DEFAULT_SUBJECT}', to: '${DEFAULT_RECIPIENTS}'
             }
     }
 }

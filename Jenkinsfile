@@ -21,9 +21,6 @@ pipeline {
         }
 
         stage ('Test') {
-            when {
-                branch 'test'
-            }
             steps {
                 sh 'npm test'
             }

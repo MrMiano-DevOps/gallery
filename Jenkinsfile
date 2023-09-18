@@ -27,7 +27,7 @@ pipeline {
         }
     }
 
-    post ('Failure Email Notification') {
+    post {
             failure {
                 mail bcc: '', body: '''$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
 

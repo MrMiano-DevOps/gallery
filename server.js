@@ -13,13 +13,10 @@ const app = express();
 
 // connecting the database
 
-const MONGODB_URI = process.env.MONGODB_URI || config.mongoURI[app.settings.env]
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true  },(err)=>{
-    if (err) {
-        console.log(err)
-    }else{
-        console.log(`Connected to Database: ${MONGODB_URI}`)
-    }
+// let mongodb_url = 'mongodb://0.0.0.0:27017/';
+// let dbName = 'darkroom';
+mongoose.connect('mongodb+srv://anthonymaina:SrMbekz2Dx6rC1tm@myappcluster.llfcrzn.mongodb.net/?retryWrites=true&w=majority',{ useNewUrlParser: true , useUnifiedTopology: true }, (err)=>{
+    if (err) console.log(err)
 });
 
 // test if the database has connected successfully

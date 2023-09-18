@@ -1,9 +1,6 @@
 pipeline {
     agent any
     tools { nodejs "Node"}
-    environment {
-        IP1_PROJECT_URL = "https://my-ip1-node-app.onrender.com/"
-    }
     stages {
         stage ('Clone repository') {
             steps {

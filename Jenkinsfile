@@ -19,5 +19,14 @@ pipeline {
                 sh 'curl $RENDER_DEPLOY_HOOK'
             }
         }
+
+        stage ('Test') {
+            when {
+                branch 'test'
+            }
+            steps {
+                sh 'npm test'
+            }
+        }
     }
 }

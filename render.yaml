@@ -1,0 +1,14 @@
+#This IaC template builds out the infrastructure required to host this application on Render
+
+services:
+  - type: web
+    name: my-ip1-node-app
+    runtime: node
+    repo: https://github.com/MrMiano-DevOps/gallery
+    region: oregon
+    plan: free
+    branch: master
+    rootDir: .
+    buildCommand: npm install
+    startCommand: node server.js
+    autoDeploy: false

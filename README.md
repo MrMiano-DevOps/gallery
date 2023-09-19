@@ -5,7 +5,7 @@ The goal of this project was to streamline deployment and testing of a Nodejs ap
 
 The app can be accessed here: https://my-ip1-node-app.onrender.com/
 
-NOTE: The app may take about 30 sec to start since free instances on Render spin down due to inactivity.
+NOTE: The app may take about 45 sec to start since free instances on Render spin down due to inactivity.
 
 
 ## Architecture Diagram

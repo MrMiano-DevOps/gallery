@@ -14,7 +14,7 @@ NOTE: The app may take about 30 sec to start since free instances on Render spin
 ## Procedure
 Setting up the github webhook to trigger   the pipeline after any commit:
 
-    + Install [ngrok](https://ngrok.com/docs)
+    + Install <a href="https://ngrok.com/docs">ngrok</a>
     + Use ngrok to create a public URL for
       the Jenkins container running locally
     + Add the URL as a github webhook

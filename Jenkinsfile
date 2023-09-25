@@ -38,15 +38,7 @@ pipeline {
 
     post {
         success {
-            slackSend( channel: "anthony_ip1", token: env.SLACK_TOKEN_1, color: "good", message: "${custom_msg()}")
+            slackSend( channel: "#anthony_ip1", token: "env.SLACK_TOKEN_1", color: "good", message: "test message")
         }
     }
-
-def custom_msg()
-{
-    def BUILD_ID = env.BUILD_ID
-    def BUILD_STATUS = env.BUILD_STATUS
-
-    def JENKINS_LOG = "BUILD # ${BUILD_ID} has ${BUILD_STATUS}"
-}
 }

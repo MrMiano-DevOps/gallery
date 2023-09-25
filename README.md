@@ -61,9 +61,9 @@ Write the pipeline script (Jenkinsfile):
       containing the application source code.
     + Stage2: Install the dependencies
       required to run the app.
-    + Stage3: Deploy the application to
+    + Stage3: Test the application
+    + Stage4: Deploy the application to
       the Render web service.
-    + Stage4: Test the application
     + Post stage: In case of any failures,
       trigger an email notification message
       to send alerts immediately.

@@ -37,7 +37,7 @@ pipeline {
     
 
         success {
-            slackSend( channel: "#anthony_ip1", token: "env.SLACK_TOKEN_1", color: "good", message: "test message")
+            slackSend( channel: "#anthony_ip1", color: "good", message: "test message")
         }
     }
 }

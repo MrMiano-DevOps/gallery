@@ -37,7 +37,7 @@ pipeline {
     
 
         success {
-            slackSend( channel: "#anthony_ip1", color: "good", message: "Pipeline Name: ${env.JOB_NAME} \n\nBuild Number: ${env.BUILD_ID} \n\n Build Status: ${currentBuild.currentResult} \n\nBuild duration: ${currentBuild.durationString.replace(' and counting', '')}\n\nThe application can be accessed here: ${IP1_PROJECT_URL}")
+            slackSend( channel: "#anthony_ip1", color: "good", message: "Pipeline Name: ${env.JOB_NAME} \n\nBuild Number: ${env.BUILD_ID} \n\n Build Status: ${currentBuild.currentResult} \n\nBuild duration: ${currentBuild.durationString.minus(' and counting')}\n\nThe application can be accessed here: ${IP1_PROJECT_URL}")
         }
     }
 }

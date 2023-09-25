@@ -34,9 +34,8 @@ pipeline {
             subject: "jenkins build:${currentBuild.currentResult}: ${env.JOB_NAME}",
             body: "${currentBuild.currentResult}: Job ${env.JOB_NAME}\nMore Info can be found here: ${env.BUILD_URL}"
         }
-    }
+    
 
-    post {
         success {
             slackSend( channel: "#anthony_ip1", token: "env.SLACK_TOKEN_1", color: "good", message: "test message")
         }

@@ -14,17 +14,18 @@ pipeline {
             }
         }
 
+        stage ('Test') {
+            steps {
+                sh 'npm test'
+            }
+        }
+
         stage ('Deploy to Render') {
             steps {
                 sh 'curl $RENDER_DEPLOY_HOOK'
             }
         }
 
-        stage ('Test') {
-            steps {
-                sh 'npm test'
-            }
-        }
     }
 
     post {

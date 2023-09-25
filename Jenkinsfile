@@ -37,7 +37,9 @@ pipeline {
     
 
         success {
-            slackSend( channel: "#anthony_ip1", color: "good", message: "Build # ${env.BUILD_ID} has the status ${env.BUILD_STATUS}. The application can be accessed here: ${IP1_PROJECT_URL}")
+            slackSend( channel: "#anthony_ip1", color: "good", message: "Pipeline: ${env.JOB_NAME}
+            Build # ${env.BUILD_ID} has the status ${currentBuild.currentResult}. 
+            The application can be accessed here: ${IP1_PROJECT_URL}")
         }
     }
 }

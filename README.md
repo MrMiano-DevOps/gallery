@@ -5,7 +5,7 @@ The goal of this project was to streamline deployment and testing of a Nodejs ap
 
 The app can be accessed here: https://my-ip1-node-app.onrender.com/
 
-NOTE: The app may take about 45 sec to start since free instances on Render spin down due to inactivity.
+NOTE: The app may take about 60 sec to start since free instances on Render spin down due to inactivity.
 
 
 ## Architecture Diagram
@@ -66,12 +66,14 @@ Write the pipeline script (Jenkinsfile):
       the Render web service.
     + Post stage: In case of any failures,
       trigger an email notification message
-      to send alerts immediately.
+      to send alerts immediately. In case of
+      a successful build, trigger a
+      notification message on Slack
 
     + NOTE: Once this file is commited to the
       repository, it will trigger the
       pipeline and any subsequent commits
-      thereafter willalso trigger the
+      thereafter will also trigger the
       pipeline.
 
 Download and configure the necessary plugins for both email and Slack notifications using the following guides:
